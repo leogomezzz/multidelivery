@@ -1,0 +1,10 @@
+= semantic_form_for [@cliente] do |form|
+  
+  = form.input :nome, :label => 'Nome'
+  = form.input :idade, :label => 'Idade'
+  = form.input :sexo, :label => 'Sexo'
+  = form.input :rua, :label => 'Rua'
+  = form.input :complemento, :label => 'Complemento' 
+  = form.input :numero, :label => 'Número'
+  = form.input :cpf, :label => 'CPF'
+  = form.submit 'Salvar'

@@ -1,0 +1,5 @@
+class ClientesController < InheritedResources::Base
+def build_resource_params
+        [params.fetch(:cliente, {}).permit(:nome, :idade, :sexo, :rua, :numero, :complemento, :cpf)]
+    end
+end
