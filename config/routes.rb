@@ -1,4 +1,6 @@
 Multidelivery::Application.routes.draw do
+  resources :categoria
+
   resources :pedidos
 
   resources :clientes

@@ -1,0 +1,29 @@
+<h1>Listing categoria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Descricao</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categoria.each do |categorium| %>
+      <tr>
+        <td><%= categorium.nome %></td>
+        <td><%= categorium.descricao %></td>
+        <td><%= link_to 'Show', categorium %></td>
+        <td><%= link_to 'Edit', edit_categorium_path(categorium) %></td>
+        <td><%= link_to 'Excluir', categorium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Categorium', new_categorium_path %>
