@@ -1,9 +1,9 @@
 Multidelivery::Application.routes.draw do
-  resources :categoria
-
   get "home/index"
 
   root :to => "home#index"
+
+  resources :categorias
 
   resources :pedidos
 
