@@ -22,7 +22,7 @@
         <td><%= produto.category %></td>
         <td><%= link_to 'Show', produto %></td>
         <td><%= link_to 'Edit', edit_produto_path(produto) %></td>
-        <td><%= link_to 'Excluir', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', produto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -12,12 +12,12 @@
 
 <p>
   <strong>Empresa:</strong>
-  <%= @produto.empresa.nome %>
+  <%= @produto.empresa %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= @produto.category.nome %>
+  <%= @produto.category %>
 </p>
 
 <%= link_to 'Edit', edit_produto_path(@produto) %> |

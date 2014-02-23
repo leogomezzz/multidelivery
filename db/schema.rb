@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140220220820) do
+ActiveRecord::Schema.define(version: 20140223133130) do
 
   create_table "categories", force: true do |t|
     t.string   "nome"
@@ -47,5 +47,17 @@ ActiveRecord::Schema.define(version: 20140220220820) do
   end
 
   add_index "pedidos", ["cliente_id"], name: "index_pedidos_on_cliente_id"
+
+  create_table "produtos", force: true do |t|
+    t.string   "nome"
+    t.float    "peso"
+    t.integer  "empresa_id"
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "produtos", ["category_id"], name: "index_produtos_on_category_id"
+  add_index "produtos", ["empresa_id"], name: "index_produtos_on_empresa_id"
 
 end
