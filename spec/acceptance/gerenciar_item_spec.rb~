@@ -48,7 +48,7 @@ feature 'gerenciar item' do
     fill_in 'Quantidade', :with => '2'
 
     select 'XXX', :from => 'Produto'
-    select '2013-07-07', :from => 'Pedido'
+    select "2013-07-07", :from => 'Pedido'
     
     click_button 'Salvar'
 

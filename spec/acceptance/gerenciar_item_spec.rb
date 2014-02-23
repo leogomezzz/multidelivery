@@ -20,7 +20,7 @@ feature 'gerenciar item' do
     produto = FactoryGirl.create(:produto, :nome => 'XXX')
     pedido = FactoryGirl.create(:pedido, :data => '2013-07-07')
 
-    item = FactoryGirl.create(:item,:produto=> produto, :pedido => pedido)
+    item = FactoryGirl.create(:item, :produto=> produto, :pedido => pedido)
 
     visit edit_item_path(item)
 
