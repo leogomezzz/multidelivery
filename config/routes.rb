@@ -1,4 +1,6 @@
 Multidelivery::Application.routes.draw do
+  resources :produtos
+
   resources :categories
 
   resources :empresas
