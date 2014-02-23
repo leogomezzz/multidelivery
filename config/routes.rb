@@ -1,5 +1,7 @@
 Multidelivery::Application.routes.draw do
-  resources :categoria
+  resources :categories
+
+  resources :empresas
 
   get "home/index"
 

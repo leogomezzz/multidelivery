@@ -3,11 +3,11 @@ require 'spec_helper'
 describe "categorias/index" do
   before(:each) do
     assign(:categorias, [
-      stub_model(Categorias,
+      stub_model(Categoria,
         :nome => "Nome",
         :descricao => "Descricao"
       ),
-      stub_model(Categorias,
+      stub_model(Categoria,
         :nome => "Nome",
         :descricao => "Descricao"
       )

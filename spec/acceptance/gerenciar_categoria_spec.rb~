@@ -3,19 +3,19 @@ require 'spec_helper'
 
 feature 'gerenciar categoria' do
   scenario 'incluir categoria', :javascript => true  do
-    visit new_categoria_path
+    visit new_categorium_path
     preencher_e_verificar_categoria
   end
 
   scenario 'alterar categoria' do #, :js => true  do
     categoria = FactoryGirl.create(:categoria)
-    visit edit_categoria_path(categoria)
+    visit edit_categorium_path(categoria)
     preencher_e_verificar_categoria
   end
 
    scenario 'excluir categoria' do #, :javascript => true  do
        categoria = FactoryGirl.create(:categoria)
-        visit categoria_path
+        visit categorium_path
         click_link 'Excluir'
 end
 

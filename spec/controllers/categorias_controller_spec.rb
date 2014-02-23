@@ -21,78 +21,78 @@ require 'spec_helper'
 describe CategoriasController do
 
   # This should return the minimal set of attributes required to create a valid
-  # Categorias. As you add validations to Categorias, be sure to
+  # Categoria. As you add validations to Categoria, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) { { "nome" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
-  # CategoriasController. Be sure to keep this updated too.
+  # CategoriaController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
   describe "GET index" do
     it "assigns all categorias as @categorias" do
-      categorias = Categorias.create! valid_attributes
+      categoria = Categoria.create! valid_attributes
       get :index, {}, valid_session
-      assigns(:categorias).should eq([categorias])
+      assigns(:categorias).should eq([categoria])
     end
   end
 
   describe "GET show" do
-    it "assigns the requested categorias as @categorias" do
-      categorias = Categorias.create! valid_attributes
-      get :show, {:id => categorias.to_param}, valid_session
-      assigns(:categorias).should eq(categorias)
+    it "assigns the requested categoria as @categoria" do
+      categoria = Categoria.create! valid_attributes
+      get :show, {:id => categoria.to_param}, valid_session
+      assigns(:categoria).should eq(categoria)
     end
   end
 
   describe "GET new" do
-    it "assigns a new categorias as @categorias" do
+    it "assigns a new categoria as @categoria" do
       get :new, {}, valid_session
-      assigns(:categorias).should be_a_new(Categorias)
+      assigns(:categoria).should be_a_new(Categoria)
     end
   end
 
   describe "GET edit" do
-    it "assigns the requested categorias as @categorias" do
-      categorias = Categorias.create! valid_attributes
-      get :edit, {:id => categorias.to_param}, valid_session
-      assigns(:categorias).should eq(categorias)
+    it "assigns the requested categoria as @categoria" do
+      categoria = Categoria.create! valid_attributes
+      get :edit, {:id => categoria.to_param}, valid_session
+      assigns(:categoria).should eq(categoria)
     end
   end
 
   describe "POST create" do
     describe "with valid params" do
-      it "creates a new Categorias" do
+      it "creates a new Categoria" do
         expect {
-          post :create, {:categorias => valid_attributes}, valid_session
-        }.to change(Categorias, :count).by(1)
+          post :create, {:categoria => valid_attributes}, valid_session
+        }.to change(Categoria, :count).by(1)
       end
 
-      it "assigns a newly created categorias as @categorias" do
-        post :create, {:categorias => valid_attributes}, valid_session
-        assigns(:categorias).should be_a(Categorias)
-        assigns(:categorias).should be_persisted
+      it "assigns a newly created categoria as @categoria" do
+        post :create, {:categoria => valid_attributes}, valid_session
+        assigns(:categoria).should be_a(Categoria)
+        assigns(:categoria).should be_persisted
       end
 
-      it "redirects to the created categorias" do
-        post :create, {:categorias => valid_attributes}, valid_session
-        response.should redirect_to(Categorias.last)
+      it "redirects to the created categoria" do
+        post :create, {:categoria => valid_attributes}, valid_session
+        response.should redirect_to(Categoria.last)
       end
     end
 
     describe "with invalid params" do
-      it "assigns a newly created but unsaved categorias as @categorias" do
+      it "assigns a newly created but unsaved categoria as @categoria" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Categorias.any_instance.stub(:save).and_return(false)
-        post :create, {:categorias => { "nome" => "invalid value" }}, valid_session
-        assigns(:categorias).should be_a_new(Categorias)
+        Categoria.any_instance.stub(:save).and_return(false)
+        post :create, {:categoria => { "nome" => "invalid value" }}, valid_session
+        assigns(:categoria).should be_a_new(Categoria)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
-        Categorias.any_instance.stub(:save).and_return(false)
-        post :create, {:categorias => { "nome" => "invalid value" }}, valid_session
+        Categoria.any_instance.stub(:save).and_return(false)
+        post :create, {:categoria => { "nome" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -100,60 +100,60 @@ describe CategoriasController do
 
   describe "PUT update" do
     describe "with valid params" do
-      it "updates the requested categorias" do
-        categorias = Categorias.create! valid_attributes
-        # Assuming there are no other categorias in the database, this
-        # specifies that the Categorias created on the previous line
+      it "updates the requested categoria" do
+        categoria = Categoria.create! valid_attributes
+        # Assuming there are no other categoria in the database, this
+        # specifies that the Categoria created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        Categorias.any_instance.should_receive(:update).with({ "nome" => "MyString" })
-        put :update, {:id => categorias.to_param, :categorias => { "nome" => "MyString" }}, valid_session
+        Categoria.any_instance.should_receive(:update).with({ "nome" => "MyString" })
+        put :update, {:id => categoria.to_param, :categoria => { "nome" => "MyString" }}, valid_session
       end
 
-      it "assigns the requested categorias as @categorias" do
-        categorias = Categorias.create! valid_attributes
-        put :update, {:id => categorias.to_param, :categorias => valid_attributes}, valid_session
-        assigns(:categorias).should eq(categorias)
+      it "assigns the requested categoria as @categoria" do
+        categoria = Categoria.create! valid_attributes
+        put :update, {:id => categoria.to_param, :categoria => valid_attributes}, valid_session
+        assigns(:categoria).should eq(categoria)
       end
 
-      it "redirects to the categorias" do
-        categorias = Categorias.create! valid_attributes
-        put :update, {:id => categorias.to_param, :categorias => valid_attributes}, valid_session
-        response.should redirect_to(categorias)
+      it "redirects to the categoria" do
+        categoria = Categoria.create! valid_attributes
+        put :update, {:id => categoria.to_param, :categoria => valid_attributes}, valid_session
+        response.should redirect_to(categoria)
       end
     end
 
     describe "with invalid params" do
-      it "assigns the categorias as @categorias" do
-        categorias = Categorias.create! valid_attributes
+      it "assigns the categoria as @categoria" do
+        categoria = Categoria.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Categorias.any_instance.stub(:save).and_return(false)
-        put :update, {:id => categorias.to_param, :categorias => { "nome" => "invalid value" }}, valid_session
-        assigns(:categorias).should eq(categorias)
+        Categoria.any_instance.stub(:save).and_return(false)
+        put :update, {:id => categoria.to_param, :categoria => { "nome" => "invalid value" }}, valid_session
+        assigns(:categoria).should eq(categoria)
       end
 
       it "re-renders the 'edit' template" do
-        categorias = Categorias.create! valid_attributes
+        categoria = Categoria.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
-        Categorias.any_instance.stub(:save).and_return(false)
-        put :update, {:id => categorias.to_param, :categorias => { "nome" => "invalid value" }}, valid_session
+        Categoria.any_instance.stub(:save).and_return(false)
+        put :update, {:id => categoria.to_param, :categoria => { "nome" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
   end
 
   describe "DELETE destroy" do
-    it "destroys the requested categorias" do
-      categorias = Categorias.create! valid_attributes
+    it "destroys the requested categoria" do
+      categoria = Categoria.create! valid_attributes
       expect {
-        delete :destroy, {:id => categorias.to_param}, valid_session
-      }.to change(Categorias, :count).by(-1)
+        delete :destroy, {:id => categoria.to_param}, valid_session
+      }.to change(Categoria, :count).by(-1)
     end
 
-    it "redirects to the categorias list" do
-      categorias = Categorias.create! valid_attributes
-      delete :destroy, {:id => categorias.to_param}, valid_session
-      response.should redirect_to(categorias_index_url)
+    it "redirects to the categoria list" do
+      categoria = Categoria.create! valid_attributes
+      delete :destroy, {:id => categoria.to_param}, valid_session
+      response.should redirect_to(categoria_index_url)
     end
   end
 
