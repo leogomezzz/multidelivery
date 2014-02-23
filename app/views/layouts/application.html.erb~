@@ -42,7 +42,7 @@ Released   : 20140216
 		</div>
 	</div>
 	<div id="banner">
-    <%= image_tag "logohorizontal.png", {height: 150} %>
+    <%= image_tag "logohorizontal.png", {height: 200} %>
     </div>
 	<div id="featured">
 		<%= yield %>
