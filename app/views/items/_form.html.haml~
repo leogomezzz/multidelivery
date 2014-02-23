@@ -1,0 +1,7 @@
+= semantic_form_for [@item] do |form|
+  
+  = form.input :quantidade, :label => 'Quantidade'
+  = form.input :produto, :member_label => :nome, :label => 'Produto' 
+  = form.input :pedido, :member_label => :nome, :label => 'Pedido' 
+  = form.submit 'Salvar'
+
