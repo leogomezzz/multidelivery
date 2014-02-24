@@ -574,6 +574,12 @@
         border: 1px solid #79C255;
 		background: #79C255;
 		border-radius: 6px;
-		color: #FFF;
+		font-color: #FFF;
+    }
+
+    div#homedescricao{
+        text-align: justify;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 

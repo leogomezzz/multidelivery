@@ -1,2 +1,8 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<h1>Bem-vindo</h1>
+<h2>Esse é o seu super sistema gerenciador multidelivery!</h2>
+<div id="homedescricao">
+<p>Navegue através do menu principal. Acessando um dos itens, você será levado à página de gerenciamento deste. Nela, é possível visualizar, inserir, alterar e excluir os dados cadastrados.</p>
+<p>Para suporte, contate-nos através do e-mail: suporte@multidelivery.net<br /> Ou por telefone (ligação gratuita): 0800-777-7000</p>
+<p>2014 @multidelivery systems</p>
+
+</div>

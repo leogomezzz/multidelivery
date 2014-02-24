@@ -495,7 +495,7 @@
 	#featured
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding: 1em 0em;
 		background: #79C255;
 		color: rgba(255,255,255,.8);
 		text-align: center;
@@ -575,5 +575,11 @@
 		background: #79C255;
 		border-radius: 6px;
 		font-color: #FFF;
+    }
+
+    div#homedescricao{
+        text-align: justify;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 

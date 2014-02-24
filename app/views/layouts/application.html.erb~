@@ -17,9 +17,7 @@ Released   : 20140216
 <%= stylesheet_link_tag :all %>
 <%= javascript_include_tag :application %>
 <%= csrf_meta_tag %>
-
-<meta name="keywords" content="" />
-<meta name="description" content="" />
+<%= favicon_link_tag '/favicon.jpg' %>
 
 <!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
