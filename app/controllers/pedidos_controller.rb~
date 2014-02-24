@@ -1,7 +1,7 @@
 class PedidosController < InheritedResources::Base
 
     def build_resource_params
-        [params.fetch(:pedido, {}).permit(:data, :hora :cliente_id)]
+        [params.fetch(:pedido, {}).permit(:data, :hora, :cliente_id, :cliente.nome)]
     end
 
 end

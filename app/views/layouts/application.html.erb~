@@ -28,10 +28,11 @@ Released   : 20140216
 <div id="wrapper">
 	<div id="header" class="container">
 		<div id="logo">
-			<h1><a href="#">Multidelivery</a></h1>
+			<h1>Multidelivery</h1>
 		</div>
 		<div id="menu">
-			<ul>
+			<ul class="menuprincipal">
+                <li><a href="/" accesskey="1" title="">Homepage</a></li>
 				<li> <%= link_to 'Empresa',empresas_path %> </li>
 				<li> <%= link_to 'Categoria',categories_path %></li>
                 <li> <%= link_to 'Produto',produtos_path %></li>
@@ -42,7 +43,7 @@ Released   : 20140216
 		</div>
 	</div>
 	<div id="banner">
-    <%= image_tag "logohorizontal.png", {height: 200} %>
+    <%= image_tag "logohorizontal.png", {height: 150} %>
     </div>
 	<div id="featured">
 		<%= yield %>

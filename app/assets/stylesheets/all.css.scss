@@ -570,5 +570,10 @@
 		overflow: hidden;
 		margin-bottom: 3em;
 	}
-
+    ul.menuprincipal > li:hover{
+        border: 1px solid #79C255;
+		background: #79C255;
+		border-radius: 6px;
+		font-color: #FFF;
+    }
 

@@ -12,7 +12,9 @@
 
 <p>
   <strong>Pedido:</strong>
+  <%= @item.pedido.cliente.nome %>
   <%= @item.pedido.data %>
+  <%= @item.pedido.hora %>
 </p>
 
 <%= link_to 'Edit', edit_item_path(@item) %> |

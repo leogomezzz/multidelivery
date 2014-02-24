@@ -570,8 +570,10 @@
 		overflow: hidden;
 		margin-bottom: 3em;
 	}
-
-li[class="string input optional stringish"]{
-    text-align: justify;
-}
+    ul.menuprincipal > li:hover{
+        border: 1px solid #79C255;
+		background: #79C255;
+		border-radius: 6px;
+		color: #FFF;
+    }
 

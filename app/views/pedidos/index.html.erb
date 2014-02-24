@@ -17,7 +17,7 @@
       <tr>
         <td><%= pedido.data %></td>
         <td><%= pedido.hora %></td>
-        <td><%= pedido.cliente %></td>
+        <td><%= pedido.cliente.nome %></td>
         <td><%= link_to 'Show', pedido %></td>
         <td><%= link_to 'Edit', edit_pedido_path(pedido) %></td>
         <td><%= link_to 'Excluir', pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
