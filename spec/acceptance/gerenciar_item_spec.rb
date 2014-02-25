@@ -6,7 +6,8 @@ feature 'gerenciar item' do
   scenario 'incluir item' do #, :javascript => true  do
 
     produto = FactoryGirl.create(:produto, :nome => 'XXX')
-    pedido = FactoryGirl.create(:pedido, :data => '2013-07-07')
+    cliente = FactoryGirl.create(:cliente, :nome => 'Leonardo')
+    pedido = FactoryGirl.create(:pedido, :data => '2013-07-07', :hora => '10:00', :cliente => cliente)
 
     visit new_item_path
 
@@ -18,7 +19,8 @@ feature 'gerenciar item' do
   scenario 'alterar item' do #, :javascript => true  do
 
     produto = FactoryGirl.create(:produto, :nome => 'XXX')
-    pedido = FactoryGirl.create(:pedido, :data => '2013-07-07')
+    cliente = FactoryGirl.create(:cliente, :nome => 'Leonardo')
+    pedido = FactoryGirl.create(:pedido, :data => '2013-07-07', :hora => '10:00', :cliente => cliente)
 
     item = FactoryGirl.create(:item, :produto=> produto, :pedido => pedido)
 
@@ -32,7 +34,9 @@ feature 'gerenciar item' do
   scenario 'excluir item' do #, :javascript => true  do
 
     produto = FactoryGirl.create(:produto, :nome => 'XXX')
-    pedido = FactoryGirl.create(:pedido, :data => '2013-07-07')
+    cliente = FactoryGirl.create(:cliente, :nome => 'Leonardo')
+    pedido = FactoryGirl.create(:pedido, :data => '2013-07-07', :hora => '10:00', :cliente => cliente)
+    
 
     item = FactoryGirl.create(:item, :produto=> produto, :pedido => pedido)
 
@@ -54,6 +58,6 @@ feature 'gerenciar item' do
 
     page.should have_content 'Quantidade: 2'
     page.should have_content 'Produto: XXX'
-    page.should have_content 'Pedido: 2013-07-07'
+    page.should have_content 'Pedido: Leonardo 2013-07-07 10:00'
     end
 end
