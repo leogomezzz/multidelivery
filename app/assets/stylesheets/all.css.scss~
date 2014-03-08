@@ -358,6 +358,7 @@
 		display: block;
 		float: left;
 		text-align: center;
+        padding: 5px;
 	}
 	
 	#menu li a, #menu li span
@@ -495,7 +496,7 @@
 	#featured
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding: 1em 0em;
 		background: #79C255;
 		color: rgba(255,255,255,.8);
 		text-align: center;
@@ -575,6 +576,7 @@
 		background: #79C255;
 		border-radius: 6px;
 		font-color: #FFF;
+        padding: 5px
     }
 
     div#homedescricao{
