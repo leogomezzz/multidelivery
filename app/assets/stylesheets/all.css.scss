@@ -359,6 +359,7 @@
 		float: left;
 		text-align: center;
         padding: 5px;
+        font-weight: bold;
 	}
 	
 	#menu li a, #menu li span
@@ -574,9 +575,8 @@
     ul.menuprincipal > li:hover{
         border: 1px solid #79C255;
 		background: #79C255;
-		border-radius: 6px;
-		font-color: #FFF;
-        padding: 5px;
+		border-radius: 20px;
+        padding: 4px;
     }
 
     div#homedescricao{

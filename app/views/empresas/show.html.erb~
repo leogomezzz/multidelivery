@@ -6,7 +6,7 @@
 </p>
 
 <p>
-  <strong>Cnpj:</strong>
+  <strong>CNPJ:</strong>
   <%= @empresa.cnpj %>
 </p>
 

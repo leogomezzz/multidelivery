@@ -6,12 +6,12 @@
 </p>
 
 <p>
-  <strong>Endereco:</strong>
+  <strong>Endereço:</strong>
   <%= @cliente.endereco %>
 </p>
 
 <p>
-  <strong>Cpf:</strong>
+  <strong>CPF:</strong>
   <%= @cliente.cpf %>
 </p>
 

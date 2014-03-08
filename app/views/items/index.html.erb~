@@ -1,4 +1,4 @@
-<h1>Listing items</h1>
+<h1>Listando Itens</h1>
 
 <table>
   <thead>
@@ -18,8 +18,8 @@
         <td><%= item.quantidade %></td>
         <td><%= item.produto.nome %></td>
         <td><%= item.pedido.cliente.nome %>, <%= item.pedido.data %>, <%= item.pedido.hora %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
+        <td><%= link_to 'Exibir', item %></td>
+        <td><%= link_to 'Editar', edit_item_path(item) %></td>
         <td><%= link_to 'Excluir', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'Novo Item', new_item_path %>

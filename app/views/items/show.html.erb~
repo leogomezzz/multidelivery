@@ -12,7 +12,7 @@
 
 <p>
   <strong>Pedido:</strong>
-  <%= @item.pedido.cliente %>
+  <%= @item.pedido.cliente.nome %>
   <%= @item.pedido.data %>
   <%= @item.pedido.hora %>
 </p>

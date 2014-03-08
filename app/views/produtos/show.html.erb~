@@ -12,7 +12,7 @@
 
 <p>
   <strong>Empresa:</strong>
-  <%= @produto.empresa%>
+  <%= @produto.empresa.nome %>
 </p>
 
 <p>

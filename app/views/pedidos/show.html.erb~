@@ -12,7 +12,7 @@
 
 <p>
   <strong>Cliente:</strong>
-  <%= @pedido.cliente %>
+  <%= @pedido.cliente.nome %>
 </p>
 
 <%= link_to 'Edit', edit_pedido_path(@pedido) %> |
